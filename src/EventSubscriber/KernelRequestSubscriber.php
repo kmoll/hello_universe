@@ -21,7 +21,7 @@ class KernelRequestSubscriber implements EventSubscriberInterface {
    * @TODO Function with many lines, should be splitted.
    */
   public function HelloUniverseMessage(GetResponseEvent $event) {
-    drupal_set_message("Hello Universe");
+    drupal_set_message("Hello Universe!");
   }
 
   /**
