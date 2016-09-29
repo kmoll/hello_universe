@@ -11,7 +11,6 @@ use Symfony\Component\HttpKernel\Event;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use kmoll\HelloUniverse\HelloUniverse;
 
 class KernelRequestSubscriber implements EventSubscriberInterface {
   /**
@@ -22,9 +21,7 @@ class KernelRequestSubscriber implements EventSubscriberInterface {
    * @TODO Function with many lines, should be splitted.
    */
   public function HelloUniverseMessage(GetResponseEvent $event) {
-    $world = new HelloUniverse();
-    $message = $world->helloUniverse();
-    drupal_set_message($message);
+    drupal_set_message("Hello Universe");
   }
 
   /**
